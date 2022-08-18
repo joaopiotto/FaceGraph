@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{596E2C19-358A-4668-A33E-F01D6BB1EB40}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UI</RootNamespace>
+    <AssemblyName>UI</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Classificadores, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ReconhecimentoDePadroes\Classificadores\bin\Debug\Classificadores.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Emgu.CV, Version=2.4.9.1847, Culture=neutral, PublicKeyToken=7281126722ab4438, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Emgu\emgucv-windows-universal-gpu 2.4.9.1847\bin\Emgu.CV.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.Util, Version=2.4.9.1847, Culture=neutral, PublicKeyToken=7281126722ab4438, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Emgu\emgucv-windows-universal-gpu 2.4.9.1847\bin\Emgu.Util.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmAnaliseTextura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAnaliseTextura.Designer.cs">
+      <DependentUpon>frmAnaliseTextura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCadastrarFaces.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadastrarFaces.Designer.cs">
+      <DependentUpon>frmCadastrarFaces.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmClassicos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmClassicos.Designer.cs">
+      <DependentUpon>frmClassicos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDestacarPontosChave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDestacarPontosChave.Designer.cs">
+      <DependentUpon>frmDestacarPontosChave.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDeteccaoCascata.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDeteccaoCascata.Designer.cs">
+      <DependentUpon>frmDeteccaoCascata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmExportar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmExportar.Designer.cs">
+      <DependentUpon>frmExportar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmKNNEntropia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKNNEntropia.Designer.cs">
+      <DependentUpon>frmKNNEntropia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAnaliseTextura.resx">
+      <DependentUpon>frmAnaliseTextura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCadastrarFaces.resx">
+      <DependentUpon>frmCadastrarFaces.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmClassicos.resx">
+      <DependentUpon>frmClassicos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDestacarPontosChave.resx">
+      <DependentUpon>frmDestacarPontosChave.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDeteccaoCascata.resx">
+      <DependentUpon>frmDeteccaoCascata.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmExportar.resx">
+      <DependentUpon>frmExportar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmKNNEntropia.resx">
+      <DependentUpon>frmKNNEntropia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\statistics2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trash-empty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder-blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\forward.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ok.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\export.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AnaliseGrafo\AnaliseGrafo.csproj">
+      <Project>{32253476-f879-4933-8ea2-4d0512fe01b7}</Project>
+      <Name>AnaliseGrafo</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\binoculars.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\burn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\misc-red.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
